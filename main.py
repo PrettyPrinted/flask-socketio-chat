@@ -9,6 +9,7 @@ socketio = SocketIO(app)
 def handleMessage(msg):
 	print('Message: ' + msg)
 	send(msg, broadcast=True)
-
+#Add a requirements text file containing all new versions of dependencies.
 if __name__ == '__main__':
 	socketio.run(app)
+	
