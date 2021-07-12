@@ -7,6 +7,7 @@ socketio = SocketIO(app, cors_allowed_origins='*')
 
 @socketio.on('message')
 def handleMessage(msg):
+	msg = msg.encode('latin-1').decode('utf-8')
 	print('Message: ' + msg)
 	send(msg, broadcast=True)
 
